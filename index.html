@@ -7360,15 +7360,19 @@ let saveTimeout = null;
 let highlightTimeout = null;
 
 // ==================== DEFAULT CODE ====================
-const DEFAULT_CODE = `defina nome como CrabCode
-defina versao como 1.0
-defina somar como funcao(x,y) execute x + y
-execute somar(3, 7)
-execute potencia de 2, 10
-execute raiz de 144
-execute aleatorio entre 1 e 100
-apresente nome em destaque
-apresente versao em texto`;
+const DEFAULT_CODE = `importe biblioteca_geral
+apresente 'Bem-vindo ao...' em texto
+apresente "CrabCode IDE" em destaque
+apresente "Versão 1.0.0" em dados
+apresente "Vamos ver um pouquinho dos que podemos fazer:" em texto
+apresente "Podemos ver o fatorial de 5: " + rodar(execute fatorial(5)) em apresentação
+apresente "Podemos rodar a área de um círculo de um raio de 3 cm: " + rodar(execute area_circulo(3)) + "cm" em apresentação
+apresente "Podemos ver quantos °F são 25°C: " + rodar(execute celsius_para_fahrenheit(25)) + "°F" em apresentação
+apresente "Ou até mesmo ver quantos ml é uma colher de sopa!" + rodar(execute colher_sopa_para_ml(1)) + "ml" em apresentação
+apresente "...E infinitamente mais! " em apresentação
+apresente "E, por sinal, esse dashboard foi criado usando CrabCode! " em texto
+apresente "Tudo isso em poucas linhas de código e sem dificuldade" em destaque
+apresente "Você pode começar agora! Vá no TUTORIAL e começe a programar!" em texto`;
 
 // ==================== LOAD SAVED CODE ====================
 function loadCode() {
@@ -11477,4 +11481,5 @@ function init() {
 init();
 </script>
 </body>
+
 </html>
